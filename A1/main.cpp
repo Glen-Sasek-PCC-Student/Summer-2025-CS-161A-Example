@@ -1,8 +1,8 @@
 // ------------- FILE HEADER -------------
-// Author: 
-// Assignment:
-// Date:
-// Description:
+// Author: Glen Sasek
+// Assignment: 1
+// Date: June 24
+// Description: Payroll
 // Sources: 
 
 
@@ -11,7 +11,7 @@
 // Chapter: 
 // Participation: 
 // Challenge:
-// Labs:
+// Labs: 
 
 
 // ------------- DISCORD POSTS -------------
