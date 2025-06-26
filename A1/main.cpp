@@ -36,6 +36,9 @@
 // ------------- CODE -------------
 #include <iostream>
 #include <string>
+// #include "lang/en.h"
+// #include "lang/es.h"
+// #include "lang/fr.h"
 
 using namespace std;
 
