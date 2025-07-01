@@ -63,9 +63,26 @@ const string LABEL_NET_PAY = "Net Pay: $";
 int main() {
   cout << MESSAGE_WELCOME << endl;
 
+  // https://en.cppreference.com/w/c/types/limits.html
+  // INT_MIN        = -2147483648
+  // INT_MAX        = +2147483647
+
+  // MIN: 0
+  // MAX: 2147483647
   int employee_id = 0;
+
+  // MIN: 0
+  // MAX: 2147483647 ^ (1/2) Square root
+  // MAX: 366 * 24 
   int hours_worked = 0;
+
+  // MIN: 0
+  // MAX: 2147483647 ^ (1/2) Square root
+  // MAX: INT_MAX/HOURS_MAX
   int hourly_rate = 0;
+
+  // MIN: 0
+  // MAX: 100
   int federal_withholding_rate = 0;
 
   cout << endl;
