@@ -14,6 +14,9 @@
 #include <string>
 using namespace std;
 
+// Compile and Test
+// g++ zybooks-lab-2-18.cpp  && ./a.out < zybooks-lab-2-18-test-1.txt && rm ./a.out
+
 int main() {
    string firstName;
    int wholeNumber;
@@ -23,7 +26,7 @@ int main() {
    /* Type your code here. */
    cin >> firstName >> wholeNumber >> pluralNoun >> genericLocation;
    
-   cout << firstName << " buys " << wholeNumber << " different types of " << pluralNoun << " at " << genericLocation << "." << endl;
+   cout << firstName << " buys " << wholeNumber << " differen types of " << pluralNoun << " at " << genericLocation << "." << endl;
 
    return 0;
 }

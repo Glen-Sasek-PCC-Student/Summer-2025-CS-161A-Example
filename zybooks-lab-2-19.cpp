@@ -17,6 +17,9 @@
 #include <iomanip>   //For setprecision
 using namespace std;
 
+// Compile and Test
+// g++ zybooks-lab-2-19.cpp && ./a.out < <(echo "100") && rm ./a.out
+
 int main() {
    double caffeineMg;  // "double" supports floating-point like 75.5, versus int for integers like 75.
    
