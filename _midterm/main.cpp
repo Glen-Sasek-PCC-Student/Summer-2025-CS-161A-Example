@@ -30,6 +30,23 @@
 #include <string>
 #include <limits> // NOT <climits> for cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
+
+// RUN AND TEST COMMAND
+// cd _midterm // Or the directory containing these files
+// g++ main.cpp && for t in *.txt; do ./a.out < $t; done; rm ./a.out 
+
+// MINIMAL COMPILE AND RUN, one line each
+// COMPILE
+// g++ main.cpp
+
+// RUN
+// ./a.out
+
+// REMOVE ./a.out
+// rm ./a.out
+
+
+
 using namespace std;
 
 int main() {
