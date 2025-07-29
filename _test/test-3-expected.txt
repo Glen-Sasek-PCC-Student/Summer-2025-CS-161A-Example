@@ -1,0 +1,13 @@
+Welcome to the Rock Collector Championships!
+Enter player 1 name:
+How many rocks did King Dedede collect? 
+Enter player 2 name: 
+How many rocks did Samus collect? 
+Enter player 3 name: 
+How many rocks did Kirby collect?
+Samus is in first place!
+Kirby is in second place.
+King Dedede is in third place.
+The average number of rocks collected by the top three players is 73.67 rocks!
+Congratulations Rock Collectors!
+

@@ -1,0 +1,13 @@
+Welcome to the Rock Collector Championships!
+Enter player 1 name: 
+How many rocks did Gordan Freeman collect? 
+Invalid amount. 0 will be entered.
+Enter player 2 name: 
+How many rocks did Link collect? 
+Enter player 3 name: 
+How many rocks did D. Va collect?
+Link and D. Va are tied for first place.
+Gordan Freeman is in second place!
+The average number of rocks collected by the top three players is 30.00 rocks!
+Congratulations Rock Collectors!
+

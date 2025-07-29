@@ -1,0 +1,11 @@
+Welcome to the Rock Collector Championships!
+Enter player 1 name: 
+How many rocks did Mario collect? 
+Enter player 2 name: 
+How many rocks did Master Chief collect? 
+Enter player 3 name: 
+How many rocks did Sonic collect?
+It is a three way tie!
+The average number of rocks collected by the top three players is 56.00 rocks!
+Congratulations Rock Collectors!
+
