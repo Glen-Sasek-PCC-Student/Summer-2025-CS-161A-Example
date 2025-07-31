@@ -35,10 +35,14 @@
 // for:
 // https://en.cppreference.com/w/cpp/numeric/math/ceil.html
 
+#include <cctype>
+// https://en.cppreference.com/w/cpp/header/cctype.html
+// for:
+// https://en.cppreference.com/w/cpp/string/byte/tolower.html
+
 using namespace std;
 
-int main()
-{
+int main() {
   const float SALES_TAX = 0.07;
   const float DELIVERY_CHARGE = 0.20;
   const int SLICES_PER_PIZZA = 8;
@@ -53,43 +57,68 @@ int main()
   float slices_per_person = 0.0;
   float USD_per_pizza = 0.0;
 
-  // CALCULATIONS
-  // Number of pizzas: 4
-  float slices = people * slices_per_person;
-  float fractional_pizzas = slices / SLICES_PER_PIZZA;
-  int pizzas = ceil(fractional_pizzas);
+  cout << "Welcome to my Pizza Party Statistics program!" << endl;
 
-  // Cost of pizzas:  $42.00
-  float pizzas_USD = pizzas * USD_per_pizza;
-  // Example 4 PIZZA * 10.50 USD / [PER] 1 PIZZA
+  bool has_next = true;
+  while (has_next) {
+    // do stuff
+    cout << "Enter the number of people, average number of slices per person, and the cost of a pizza separated by a space: ";
 
-  // Tax:             $2.94
-  float tax_USD = pizzas_USD * SALES_TAX;
+    cout << "OPTIONAL: VALIDATE INPUT, numbers not characters, etc..." << endl;
+    cin >> people;
+    cin >> slices_per_person;
+    cin >> USD_per_pizza;
 
-  float pizzas_plus_tax_USD = pizzas_USD + tax_USD;
+    // CALCULATIONS
+    // Number of pizzas: 4
+    float slices = people * slices_per_person;
+    float fractional_pizzas = slices / SLICES_PER_PIZZA;
+    int pizzas = ceil(fractional_pizzas);
 
-  // Delivery:        $8.99
-  float delivery_USD = pizzas_plus_tax_USD * DELIVERY_CHARGE;
+    // Cost of pizzas:  $42.00
+    float pizzas_USD = pizzas * USD_per_pizza;
+    // Example 4 PIZZA * 10.50 USD / [PER] 1 PIZZA
 
-  // Total Cost:      $53.93
-  float cost_USD = pizzas_plus_tax_USD + delivery_USD;
+    // Tax:             $2.94
+    float tax_USD = pizzas_USD * SALES_TAX;
 
-  // AFTER EACH ENTRY
-  // Maximum number of people: 14
-  int max_people = max(max_people, people);
+    float pizzas_plus_tax_USD = pizzas_USD + tax_USD;
 
-  // Maximum cost of pizzas: $115.17
-  float max_cost_USD = max(max_cost_USD, cost_USD);
+    // Delivery:        $8.99
+    float delivery_USD = pizzas_plus_tax_USD * DELIVERY_CHARGE;
 
-  // Increment entries count
-  total_entries++;
+    // Total Cost:      $53.93
+    float cost_USD = pizzas_plus_tax_USD + delivery_USD;
 
-  // SUM PIZZAS
-  total_pizzas = total_pizzas + pizzas;
+    // AFTER EACH ENTRY
+    // Maximum number of people: 14
+    int max_people = max(max_people, people);
+
+    // Maximum cost of pizzas: $115.17
+    float max_cost_USD = max(max_cost_USD, cost_USD);
+
+    // Increment entries count
+    total_entries++;
+
+    // SUM PIZZAS
+    total_pizzas = total_pizzas + pizzas;
+
+    // AGAIN ?
+    char y_or_n = '\0'; // Null character '\0'
+    // ASCII TABLE: https://chatgpt.com/share/68794aa0-be34-8013-954c-afa8b9f53e34
+
+    cout << "Do you want to enter more [y/n]: ";
+    cin >> y_or_n;
+    y_or_n = tolower(y_or_n);
+    has_next = y_or_n == 'y';
+  }
 
   // AFTER ALL ENTRIES
   // Average number of pizzas: 4.3
   float average_pizzas = static_cast<float>(total_pizzas) / total_entries;
+
+
+  
   return 0;
 }
 
