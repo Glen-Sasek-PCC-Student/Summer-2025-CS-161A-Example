@@ -35,13 +35,23 @@
 // for:
 // https://en.cppreference.com/w/cpp/numeric/math/ceil.html
 
+
 #include <cctype>
 // https://en.cppreference.com/w/cpp/header/cctype.html
 // for:
 // https://en.cppreference.com/w/cpp/string/byte/tolower.html
 
+#include <iomanip>
+// For setprecision
+// https://en.cppreference.com/w/cpp/header/iomanip.html
+
 using namespace std;
 
+const bool debug = true;
+
+
+// Compile and test
+// g++ main.cpp && ./a.out < test.txt && rm ./a.out
 int main() {
   const float SALES_TAX = 0.07;
   const float DELIVERY_CHARGE = 0.20;
@@ -50,6 +60,8 @@ int main() {
   // TOTALS
   int total_entries = 0;
   int total_pizzas = 0;
+  int max_people = 0;
+  float max_cost_USD = 0.0;
 
   // EACH ENTRY
   // INPUTS
@@ -62,12 +74,21 @@ int main() {
   bool has_next = true;
   while (has_next) {
     // do stuff
+    cout << endl;
     cout << "Enter the number of people, average number of slices per person, and the cost of a pizza separated by a space: ";
 
-    cout << "OPTIONAL: VALIDATE INPUT, numbers not characters, etc..." << endl;
+    // OPTIONAL: VALIDATE INPUT, numbers not characters, etc...
     cin >> people;
     cin >> slices_per_person;
     cin >> USD_per_pizza;
+
+    // DEBUG ECHO INPUT
+    if(debug) {
+      cout << endl;
+      cout << "people: " << people << endl;
+      cout << "slices_per_person: " << slices_per_person << endl;
+      cout << "USD_per_pizza:" << USD_per_pizza << endl;
+    }    
 
     // CALCULATIONS
     // Number of pizzas: 4
@@ -90,12 +111,20 @@ int main() {
     // Total Cost:      $53.93
     float cost_USD = pizzas_plus_tax_USD + delivery_USD;
 
+    cout << endl;
+    cout << fixed << setprecision(2);
+    cout << setw(18) << left << "Number of pizzas:"  << setw(8) << right  << pizzas << endl;
+    cout << setw(18) << left << "Cost of pizzas:" << "$" << setw(7) << right << pizzas_USD << endl;
+    cout << setw(18) << left << "Tax:" <<            "$"<< setw(7) << right << tax_USD << endl;
+    cout << setw(18) << left << "Delivery:" <<       "$" << setw(7) << right << delivery_USD << endl;
+    cout << setw(18) << left << "Total Cost:" <<     "$" << setw(7) << right << cost_USD << endl;
+
     // AFTER EACH ENTRY
     // Maximum number of people: 14
-    int max_people = max(max_people, people);
+    max_people = max(max_people, people); // https://en.cppreference.com/w/cpp/algorithm/max.html
 
     // Maximum cost of pizzas: $115.17
-    float max_cost_USD = max(max_cost_USD, cost_USD);
+    max_cost_USD = max(max_cost_USD, cost_USD);
 
     // Increment entries count
     total_entries++;
@@ -111,14 +140,29 @@ int main() {
     cin >> y_or_n;
     y_or_n = tolower(y_or_n);
     has_next = y_or_n == 'y';
+    cout << endl;
   }
 
   // AFTER ALL ENTRIES
   // Average number of pizzas: 4.3
   float average_pizzas = static_cast<float>(total_pizzas) / total_entries;
 
+  cout << endl;
+  cout << fixed;
+  cout << "Number of entries: " << total_entries << endl;
+  cout << "Total number of pizzas: " << total_pizzas << endl;
 
-  
+  cout << setprecision(1);
+  cout << "Average number of pizzas: " << average_pizzas << endl;
+
+  cout << "Maximum number of people: " << max_people << endl;
+
+  cout << setprecision(2);
+  cout << "Maximum cost of pizzas: $" << max_cost_USD << endl;
+
+  cout << endl;
+  cout << "Thank you for using my program!" << endl;
+
   return 0;
 }
 
