@@ -1,4 +1,5 @@
 #include <iostream>
+#include "gs-utils.h"
 
 using namespace std;
 
@@ -59,6 +60,16 @@ int main() {
 
     carWashByReference(car);
     cout << "CAR IS: " << car << endl;
+
+
+
+    int x = getInt("GIMMIE an INT: ");
+    cout << endl << "GOT IT: " << x << endl;
+
+
+    x = getInt("PARDON ME, DO YOu HAVE AN INT PLEASE?: ", "UM that wasn't an int was it?????\n");
+    cout << endl << "GOT IT: " << x << endl;
+
 }
 
 
