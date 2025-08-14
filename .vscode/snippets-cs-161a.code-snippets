@@ -24,5 +24,15 @@
 			"#include <iostream>\n\nusing namespace std;\n\nint main() {\n\n\tcout << \"Hello, World!\" << endl;\n\n}"
 		],
 		"description": "CPP Hello World"
+	},
+
+	"cout line": {
+		"scope": "cpp,h",
+		"prefix": "cl",
+		"body": [
+			"cout << \"$1\" << endl;"
+		],
+		"description": "cout line"
 	}
+
 }

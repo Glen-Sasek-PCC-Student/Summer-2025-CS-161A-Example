@@ -12,6 +12,9 @@ using std::cin;
 using std::numeric_limits;
 using std::streamsize;
 
+
+// Students: it is ok to copy, modify, or otherwise re-use functions in this file
+
 int getInt(string prompt = "", string error_message = "") {
     int n = 0;
     bool valid = false;
