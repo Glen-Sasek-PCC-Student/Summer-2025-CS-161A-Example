@@ -33,8 +33,10 @@ int main() {
 
     // negation
     bool flag = false;
-    if (!flag) {
+    if (flag == false) {
         std::cout << "flag is false\n"; // expected
+    } else {
+        std::cout << "flag is true\n"; // expected
     }
 
     // ternary operator (expression form)
