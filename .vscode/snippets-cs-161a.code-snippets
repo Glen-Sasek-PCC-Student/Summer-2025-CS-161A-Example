@@ -33,6 +33,17 @@
 			"cout << \"$1\" << endl;"
 		],
 		"description": "cout line"
+	},
+
+    "compile run clean": {
+		"scope": "cpp",
+		"prefix": "crc",
+		"body": [
+			"// g++ $1 && ./a.out && rm ./a.out"
+		],
+		"description": "compile run clean"
 	}
 
+
+	
 }
