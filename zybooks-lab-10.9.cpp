@@ -43,6 +43,8 @@ void RemoveSpaces(char userString[], char userStringNoSpaces[]) {
     for(int i = 0; i < strlen(userString); i++) {
         if(userString[i] != ' ') {
             strncat(userStringNoSpaces, userString + i, 1);
+            // https://en.cppreference.com/w/cpp/string/byte/strcat.html
+            // https://en.cppreference.com/w/cpp/string/byte/strncat.html
         }
     }
 
