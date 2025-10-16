@@ -39,7 +39,7 @@
 		"scope": "cpp",
 		"prefix": "crc",
 		"body": [
-			"// g++ $1 && ./a.out && rm ./a.out"
+			"// g++ $TM_FILENAME && ./a.out && rm ./a.out"
 		],
 		"description": "compile run clean"
 	}
