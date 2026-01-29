@@ -1,18 +1,26 @@
+// https://en.cppreference.com/w/cpp/io/basic_istream.html
+// https://en.cppreference.com/w/cpp/io/basic_ostream.html
 #include <iostream>
-#include <string>
+
+// https://en.cppreference.com/w/cpp/string/basic_string.html 
+#include <string> 
+
 using namespace std;
 
+// Compile, run, and cleanup command
 // g++ example-string-find-substr.cpp && ./a.out && rm ./a.out
 
 int main() {
     string text = "OpenAI Codex helps write code efficiently.";
     
     // Find the position of a substring
-    size_t pos = text.find("Codex");
+    // https://en.cppreference.com/w/cpp/string/basic_string/find.html
+    size_t pos = text.find("Codex"); 
     if (pos != string::npos) {
         cout << "\"Codex\" found at position: " << pos << endl;
         
         // Extract substring starting from the found position
+        // https://en.cppreference.com/w/cpp/string/basic_string/substr.html
         string part = text.substr(pos);  // from "Codex" to end
         cout << "Substring from that point: " << part << endl;
         
